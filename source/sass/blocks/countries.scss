@@ -1,0 +1,184 @@
+.countries__wrapper {
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.countries__list {
+  @include list-default-remove;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $light-color;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $light-color;
+  padding-bottom: 16px;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+
+  @include mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.countries__link {
+  @include link-default-remove;
+  margin-right: 97px;
+}
+
+.countries__container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding-top: 79px;
+  gap: 4px;
+  position: relative;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+  }
+
+  @include mobile {
+    padding-top: 10px;
+  }
+}
+
+.countries__description {
+  @include tablet {
+    padding: 0 20px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mobile {
+    padding: 0 15px 45px;
+  }
+}
+
+.countries__title {
+  letter-spacing: -1.245px;
+  padding-top: 15px;
+
+  @include tablet {
+    padding: 15px;
+    letter-spacing: normal;
+  }
+}
+
+.countries__text {
+  margin: 0;
+  padding: 54px 92px 49px 0;
+  letter-spacing: -0.466667px;
+
+  @include tablet {
+    padding: 5px 4px 19px 4px;
+    text-align: center;
+  }
+}
+
+.countries__button {
+  min-width: 250px;
+  min-height: 75px;
+
+  @include tablet {
+    min-height: 50px;
+  }
+}
+
+.countries__picture {
+  width: 430px;
+  height: 596px;
+
+  @include tablet {
+    width: 100%;
+    height: 415px;
+  }
+}
+
+.countries__review {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 382px;
+  min-height: 367px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-40%);
+  background-color: $white;
+  padding: 26px 26px 26px 30px;
+
+  @include tablet {
+    padding-top: 31px;
+    right: 50%;
+    transform: translate(50%, 13%);
+  }
+
+  @include mobile {
+    width: 268px;
+    min-height: 431px;
+    align-items: center;
+    transform: translate(50%, 30%);
+    padding: 34px 20px 26px 18px;
+  }
+}
+
+.countries__review-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.691667px;
+  color: $title-grey;
+  padding-bottom: 12px;
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.691667px;
+  }
+}
+
+.countries__review-content {
+  margin: 0;
+  padding-top: 23px;
+  padding-bottom: 30px;
+  letter-spacing: -0.408333px;
+  font-size: 14px;
+  line-height: 28px;
+
+  @include mobile {
+    text-align: center;
+    padding-top: 21px;
+    padding-bottom: 18px;
+  }
+}
+
+.countries__review-person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+    letter-spacing: -0.466667px;
+  }
+}
+
+.countries__review-picture {
+  border-radius: 50%;
+  margin-right: 8px;
+
+  @include mobile {
+    margin: 0;
+    margin-bottom: 7px;
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Way</title>
+  <link rel="stylesheet" href="./css/vendor/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="page__body">
+  <header class="page__header header">
+    <div class="header__wrapper wrapper">
+      <a class="header__logo">
+        <svg class="header__logo-icon" width="58" height="22" viewBox="0 0 58 22">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <div class="header__toggle-open" tabindex="0"  aria-label="Открыть главное меню">
+        <div class="header__icon-open"></div>
+      </div>
+      <nav class="header__navigation navigation navigation--no-js">
+        <div class="navigation__toggle-closed"  tabindex="0" aria-label="Закрыть главное меню">
+          <div class="navigation__icon-closed"></div>
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#tour-description" class="navigation__link navigation__link--info">О путешествии</a>
+          </li>
+          <li class="navigation__item">
+            <a href="javascript:void(0);" class="navigation__link navigation__link--price">Цены</a>
+          </li>
+        </ul>
+        <a href="tel:+749978468446" class="navigation__link-phone">
+          <svg class="navigation__link-icon" width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg>
+          +7 (499) -784-684-46
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main class="page__main">
+    <h1 class="visually-hidden">
+      Way Путешествие по Европе
+    </h1>
+    <section class="banner">
+      <div class="banner__wrapper wrapper">
+        <h2 class="banner__title title">Путешествие <br> по Европе</h2>
+        <div class="banner__content-cotainer">
+          <p class="banner__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+          <button class="banner__button button" type="button" aria-label="Открыть главное меню">смотреть тур</button>
+        </div>
+      </div>
+    </section>
+    <section class="tour-description">
+      <div class="tour-description__wrapper wrapper">
+        <h2 class="tour-description__title title" id="tour-description">Места <br> посещения</h2>
+        <p class="tour-description__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+        <ul class="tour-description__list">
+          <li class="tour-description__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet.webp 1x, img/greece-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/greece.webp 1x, img/greece@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/greece-tablet.jpg 1x, img/greece-tablet@2x.jpg 2x">
+              <img class="tour-description__picture" src="img/greece.jpg" srcset="img/greece@2x.jpg" alt="Метеоры в Греции" loading="lazy">
+            </picture>
+            <p class="tour-description__picture-name">Греция</p>
+            <a href="#countries" class="tour-description__button button" data-country="greece">смотреть подробнее</a>
+          </li>
+          <li class="tour-description__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet.webp 1x, img/albania-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/albania.webp 1x, img/albania@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/albania-tablet.jpg 1x, img/albania-tablet@2x.jpg 2x">
+              <img class="tour-description__picture" src="img/albania.jpg" srcset="img/albania@2x.jpg" alt="Пляж в Албании" loading="lazy">
+            </picture>
+            <p class="tour-description__picture-name">Албания</p>
+            <a href="#countries" class="tour-description__button button" data-country="albania">смотреть подробнее</a>
+          </li>
+          <li class="tour-description__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet.webp 1x, img/macedonia-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/macedonia.webp 1x, img/macedonia@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/macedonia-tablet.jpg 1x, img/macedonia-tablet@2x.jpg 2x">
+              <img class="tour-description__picture" src="img/macedonia.jpg" srcset="img/macedonia@2x.jpg" alt="Крепость В Македонии" loading="lazy">
+            </picture>
+            <p class="tour-description__picture-name">Македония</p>
+            <a href="#countries" class="tour-description__button button" data-country="macedonia">смотреть подробнее</a>
+          </li>
+          <li class="tour-description__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet.webp 1x, img/montenegro-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/montenegro.webp 1x, img/montenegro@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/montenegro-tablet.jpg 1x, img/montenegro-tablet@2x.jpg 2x">
+              <img class="tour-description__picture" src="img/montenegro.jpg" srcset="img/montenegro@2x.jpg" alt="Природа в Черногрии" loading="lazy">
+            </picture>
+            <p class="tour-description__picture-name">Черногория</p>
+            <a href="#countries" class="tour-description__button button" data-country="montenegro">смотреть подробнее</a>
+          </li>
+          <li class="tour-description__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/сroatia-tablet.webp 1x, img/сroatia-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/сroatia.webp 1x, img/сroatia@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/сroatia-tablet.jpg 1x, img/сroatia-tablet@2x.jpg 2x">
+              <img class="tour-description__picture" src="img/сroatia.jpg" srcset="img/сroatia@2x.jpg" alt="Пищера в Хорватии" loading="lazy">
+            </picture>
+            <p class="tour-description__picture-name">Хорватия</p>
+            <a href="#countries" class="tour-description__button button" data-country="сroatia">смотреть подробнее</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="countries" id="countries">
+      <div class="countries__wrapper wrapper">
+        <ul class="countries__list">
+          <li class="countries__item">
+            <a href="javascript:void(0);" class="countries__link" data-country="greece">Греция</a>
+          </li>
+          <li class="countries__item">
+            <a href="javascript:void(0);" class="countries__link" data-country="albania">Албания</a>
+          </li>
+          <li class="countries__item">
+            <a href="javascript:void(0);" class="countries__link" data-country="macedonia">Македония</a>
+          </li>
+          <li class="countries__item">
+            <a href="javascript:void(0);" class="countries__link" data-country="montenegro">Черногория</a>
+          </li>
+          <li class="countries__item">
+            <a href="javascript:void(0);" class="countries__link" data-country="сroatia">Хорватия</a>
+          </li>
+        </ul>
+        <div class="countries__container">
+          <div class="countries__description">
+            <h2 class="countries__title title">Греция</h2>
+            <p class="countries__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
+            <button class="countries__button button" type="button">купить тур сейчас</button>
+          </div>
+          <div class="countries__feature">
+            <img class="countries__picture" src="img/greece.jpg" alt="Горы в Греции" loading="lazy">
+            <div class="countries__review">
+              <h3 class="countries__review-title">Отзывы</h3>
+              <p class="countries__review-content">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
+              <div class="countries__review-person">
+                <img class="countries__review-picture" src="img/user-greece.jpg" alt="Фотография комментатора">
+                <p class="countries__review-name">Влада Голицина</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/script.min.js"></script>
+</body>

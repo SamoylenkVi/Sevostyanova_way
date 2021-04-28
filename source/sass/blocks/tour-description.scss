@@ -1,0 +1,149 @@
+.tour-description__wrapper {
+  padding-top: 202px;
+  padding-bottom: 87px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 7px 102px;
+  }
+
+  @include mobile {
+    padding-bottom: 30px;
+  }
+}
+
+.tour-description__title {
+  letter-spacing: -1.245px;
+  position: relative;
+  padding-bottom: 31px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid $orange;
+    width: 228.51px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include tablet {
+    letter-spacing: normal;
+    padding-bottom: 22px;
+
+    br {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.tour-description__text {
+  padding: 32px 72% 54px 0;
+  margin: 0;
+  letter-spacing: -0.466667px;
+
+  @include tablet {
+    padding: 0 25% 38px;
+    text-align: center;
+  }
+
+  @include mobile {
+    padding: 0 2% 18px;
+    text-align: center;
+  }
+}
+
+.tour-description__button {
+  display: none;
+}
+
+.tour-description__list {
+  @include list-default-remove;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 92px 60px;
+
+  @include tablet {
+    justify-content: center;
+    gap: 10px 31px;
+  }
+
+  @include mobile {
+    gap: 26px 31px;
+  }
+}
+
+.tour-description__item {
+  position: relative;
+
+  &:hover {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 98%;
+      width: 100%;
+      background-color: $hover-grey;
+      z-index: 1;
+    }
+
+    .tour-description__button {
+      @include link-default-remove;
+      color: $white;
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -53%);
+      width: 266px;
+      height: 77px;
+      z-index: 2;
+      background-color: inherit;
+      border: 1px solid $white;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+.tour-description__picture {
+  width: 350px;
+  height: 430px;
+
+  @include tablet {
+    width: 288px;
+    height: 425px;
+  }
+}
+
+.tour-description__picture-name {
+  position: absolute;
+  min-width: 215px;
+  min-height: 63px;
+  background-color: $white;
+  bottom: 8px;
+  left: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.415px;
+
+  @include tablet {
+    left: 36px;
+  }
+}

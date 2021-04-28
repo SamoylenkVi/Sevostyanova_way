@@ -1,0 +1,14 @@
+.title {
+  @include font-options($family-montserrat, $title-font-size, $title-line-height, $semibold-font-weight, $title-grey);
+  margin: 0;
+
+  @include tablet {
+    font-size: $title-tablet-size;
+    line-height: $title-tablet-height;
+  }
+
+  @include mobile {
+    font-size: $title-mobile-size;
+    line-height: $title-mobile-height;
+  }
+}

@@ -1,0 +1,143 @@
+.banner {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    min-height: 100%;
+    background-size: cover;
+    background-color: $blue;
+
+    @include retina {
+      background-image: url("../img/banner@2x.jpg");
+    }
+
+    @include tablet {
+      background-image: url("../img/banner-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/banner-tablet@2x.jpg");
+      }
+    }
+
+    @include mobile {
+      background-color: $white;
+      background-image: none;
+    }
+  }
+}
+
+.banner__wrapper {
+  min-height: 860px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 186px 106px 100px 720px;
+
+  @include tablet {
+    padding: 0;
+    align-items: center;
+    padding: 59px 24%;
+    min-height: 344px;
+  }
+
+  @include mobile {
+    justify-content: center;
+    padding: 0 16px 28px;
+  }
+}
+
+.banner__content-cotainer {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.banner__title {
+  color: $white;
+  margin: 0;
+  letter-spacing: -1.10667px;
+  padding-bottom: 28px;
+
+  @include tablet {
+    letter-spacing: normal;
+    padding-bottom: 15px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    text-align: center;
+    padding: 81px 16px 20px;
+    min-height: 235px;
+    background-image: url("../img/banner-mobile.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    width: calc(100% + 16px * 2);
+    background-color: $blue;
+
+    @include retina {
+      background-image: url("../img/banner-mobile@2x.jpg");
+    }
+  }
+}
+
+.banner__text {
+  color: $white;
+  margin: 0;
+  letter-spacing: -0.466667px;
+  padding-bottom: 30px;
+
+  @include tablet {
+    text-align: center;
+    padding-bottom: 8px;
+  }
+
+  @include mobile {
+    color: $title-grey;
+    padding-bottom: 17px;
+    padding-top: 19px;
+  }
+}
+
+.banner__button {
+  position: relative;
+  min-width: 340px;
+  min-height: 75px;
+  justify-content: flex-start;
+  margin-right: 43px;
+  padding: 10px 62px 10px 39px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-25%);
+  }
+
+  @include tablet {
+    min-width: 250px;
+    min-height: 50px;
+    margin: 0;
+    padding: 12px 60px 10px 42px;
+  }
+
+  @include mobile {
+    padding-left: 40px;
+  }
+}

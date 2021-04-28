@@ -1,0 +1,3 @@
+.page__body {
+  @include font-options($family-montserrat, $base-font-size, $base-line-height, $normal-font-weight, $basic-color);
+}

@@ -1,0 +1,143 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: $dark-grey;
+  padding-bottom: 13px;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.navigation__toggle-closed {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 52px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.navigation__icon-closed {
+  background-image: url("../img/menu-closed.svg");
+  background-repeat: no-repeat;
+  background-size: 22px, 22.72px;
+  height: 22.72px;
+  width: 22px;
+}
+
+.navigation--close {
+  @include tablet {
+    position: fixed;
+    transform: translateX(-100%);
+    transition-duration: 100ms;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    margin: 0;
+    height: 100vh;
+  }
+}
+
+.navigation--open {
+  @include tablet {
+    position: fixed;
+    transform: translateX(0%);
+    transition-duration: 100ms;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    margin: 0;
+    height: 100vh;
+    z-index: 2;
+  }
+}
+
+.navigation__list {
+  @include list-default-remove;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 17px;
+
+  @include tablet {
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 129px;
+  }
+}
+
+.navigation__item {
+  margin-right: 46px;
+  padding-top: 9px;
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    margin-right: 0;
+  }
+}
+
+.navigation__link {
+  @include link-default-remove;
+  display: inline-block;
+  vertical-align: middle;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  @include tablet {
+    min-height: 60px;
+    margin-bottom: 25px;
+    padding-left: 16px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: $grey;
+    flex-grow: 1;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+}
+.navigation__link-phone {
+  @include link-default-remove;
+  font-size: 18px;
+  line-height: 32px;
+  margin-left: 5px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  padding-top: 11px;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.navigation__link-icon {
+  margin-right: 9px;
+}

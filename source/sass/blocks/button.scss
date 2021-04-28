@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: $orange;
+  border: none;
+  color: $white;
+
+  @include tablet {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  @include mobile {
+    width: 288px;
+    align-self: center;
+  }
+}
